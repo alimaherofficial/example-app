@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('posts', [
-        'posts' => Post::with('category')->get()
+        'posts' => Post::latest()->get()
     ]);
 });
 
@@ -33,15 +33,13 @@ Route::get('posts/{post:slug}', function (Post $post) {
 
 
 Route::get('categories/{category:slug}', function (Category $category) {
-    // ddd($category->posts);
     return view('posts', [
-        'posts' => $category->posts
+        'posts' => $category->posts,
     ]);
 });
 
-Route::get('users/{user}', function (User $user) {
-    // ddd($user->posts[0]->title);
+Route::get('authers/{auther:username}', function (User $auther) {
     return view('posts', [
-        'posts' => $user->posts
+        'posts' => $auther->posts,
     ]);
 });

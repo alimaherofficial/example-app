@@ -1,5 +1,5 @@
 body {
-    background-color: cadetblue;
+    background-color: darkblue;
     color: white;
     margin: auto;
 
@@ -16,5 +16,6 @@ article {
     border: 1px solid black;
     border-radius: 25px;
     padding: 30px;
-    background: linear-gradient(90deg, rgba(15, 10, 96, 1) 1%, rgba(9, 9, 121, 1) 50%, rgba(17, 17, 190, 1) 100%);
+    background: cornflowerblue;
+    /* linear-gradient(90deg, rgba(15, 10, 96, 1) 1%, rgba(9, 9, 121, 1) 50%, rgba(17, 17, 190, 1) 100%); */
 }

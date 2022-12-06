@@ -23,11 +23,13 @@ class DatabaseSeeder extends Seeder
 
 
 
-        $user = \App\Models\Post::factory(5)->create();
-        // $fUser = \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $user = \App\Models\User::factory()->create([
+            'name' => 'Ali Maher',
+
+        ]);
+        $user = Post::factory(5)->create([
+            'user_id'=> $user->id
+        ]);
         // $sUser = \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test2@example.com',

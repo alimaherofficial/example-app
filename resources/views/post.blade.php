@@ -16,7 +16,8 @@
         <h1>{{ $post->title }}</h1>
         <P>{{ $post->body }}</P>
         <p>
-            <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
+            Written by <a href="/authers/{{ $post->auther->username }}">{{ $post->auther->name }} </a> in <a
+                href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
         </p>
         <a href="/">Go Back</a>
     </article>
